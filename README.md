@@ -26,3 +26,4 @@ https://rockylinux.org/download/
 VM NETWORKING RESOURCES:
 
 https://www.youtube.com/watch?v=2Fkf6Kysh7I
+https://www.youtube.com/watch?v=H27zMeff3SE
