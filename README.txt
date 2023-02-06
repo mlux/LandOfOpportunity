@@ -37,3 +37,4 @@ PUPPET MANIFEST / NGINX RESOURCES:
 https://subscription.packtpub.com/book/networking-and-servers/9781784394882/4/ch04lvl1sec59/making-quick-edits-to-config-files
 https://www.server-world.info/en/note?os=Rocky_Linux_8&p=nginx&f=2
 https://www.youtube.com/watch?v=MP3Wm9dtHSQ
+https://linuxiac.com/nginx-virtual-host/
