@@ -13,3 +13,10 @@ TROUBLESHOOTING NOTES:
 PUPPET RESOURCES:
 
 https://www.how2shout.com/linux/install-puppet-server-agent-on-rocky-linux-or-almalinux-8/
+https://www.atlantic.net/dedicated-server-hosting/how-to-set-and-change-hostname-in-rocky-linux-8/
+https://www.puppet.com/docs/puppetdb/7/install_from_source.html
+https://www.youtube.com/watch?v=T5QMnvHie0M
+
+ROCKY LINUX DOWNLOAD LOCATION:
+
+https://rockylinux.org/download/
