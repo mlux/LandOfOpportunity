@@ -1,4 +1,4 @@
-node default{
+node www.actestsite.com {
 
 	package { 'nginx':
 		ensure=> 'installed',
