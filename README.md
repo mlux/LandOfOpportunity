@@ -16,6 +16,7 @@ https://www.how2shout.com/linux/install-puppet-server-agent-on-rocky-linux-or-al
 https://www.atlantic.net/dedicated-server-hosting/how-to-set-and-change-hostname-in-rocky-linux-8/
 https://www.puppet.com/docs/puppetdb/7/install_from_source.html
 https://www.youtube.com/watch?v=T5QMnvHie0M
+https://www.puppet.com/docs/puppet/5.5/install_linux.html
 
 ROCKY LINUX DOWNLOAD LOCATION:
 
