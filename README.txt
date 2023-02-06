@@ -31,3 +31,8 @@ VM NETWORKING RESOURCES:
 
 https://www.youtube.com/watch?v=2Fkf6Kysh7I
 https://www.youtube.com/watch?v=H27zMeff3SE
+
+PUPPET MANIFEST RESOURCES:
+
+https://subscription.packtpub.com/book/networking-and-servers/9781784394882/4/ch04lvl1sec59/making-quick-edits-to-config-files
+
