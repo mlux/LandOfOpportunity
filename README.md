@@ -17,6 +17,7 @@ https://www.atlantic.net/dedicated-server-hosting/how-to-set-and-change-hostname
 https://www.puppet.com/docs/puppetdb/7/install_from_source.html
 https://www.youtube.com/watch?v=T5QMnvHie0M
 https://www.puppet.com/docs/puppet/5.5/install_linux.html
+http://yum.puppet.com/?_ga=2.98872984.786704552.1675577428-1587236834.1675577428
 
 ROCKY LINUX DOWNLOAD LOCATION:
 
