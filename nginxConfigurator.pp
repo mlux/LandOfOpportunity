@@ -1,14 +1,10 @@
-node www.actestsite.com {
+node puppet.target.com {
 
   package {'nginx':
     ensure => present,
-    before => File['/etc/ssh/sshd_config'],
   }
   
-  file [
-  
-  
-  
   nginx::vhost { 'www.anothertestsite.com':
-    docroot => 'var/www/html/www.anothertestsite.com'
+    docroot => 'var/www/html/www.anothertestsite.com',
+  }
 }
