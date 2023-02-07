@@ -55,5 +55,6 @@ CONFIGURING ANSIBLE:
 
 https://www.youtube.com/watch?v=Q4KWe2gd0ZU
 
+NFSD DOCUMENTATION:
 
-
+https://man7.org/linux/man-pages/man7/nfsd.7.html#:~:text=The%20nfsd%20filesystem%20is%20a,provide%20information%20about%20the%20server.
