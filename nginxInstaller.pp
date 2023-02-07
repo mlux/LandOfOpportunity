@@ -1,10 +1,21 @@
-# $html_path = '/usr/share/nginx'/actestsite.com
+
 $epp_source_path = '/etc/puppetlabs/code/environments/production/files'
 $default_sblock_path = '/etc/puppetlabs/code/environments/production/templates'
-$vhost = 'michaellux.com'
+$vhost = 'www.anothertestsite.com'
 $doc_root = '/usr/share/nginx'
+#$doc_root = '/var/www/html'
+#$create_dirs = ['/var/','/var/www/',"${doc_root}"]
+
 
 node puppet.target.com {
+
+	# This creates the directory path for $doc_root if needed
+#	file {$create_dirs:
+#		ensure => "directory",
+#		owner => 'root',
+#		group => 'root',
+#		mode => '0777',
+#	}
 
 	# This function installs the nginx package
 	package {'nginx':
@@ -41,7 +52,7 @@ node puppet.target.com {
 	}
 	
 	# This creates our website .conf file and populates it using the contents found in our specified epp file
-	file {'/etc/nginx/conf.d/${vhost}.conf':
+	file {"/etc/nginx/conf.d/actestsite.com.conf":
 		ensure => "file",
 		owner => 'root',
 		group => 'root',
@@ -60,4 +71,3 @@ node puppet.target.com {
 		notify =>Service["nginx"],
 	}
 }
-
