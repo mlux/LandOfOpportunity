@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Welcome to <%= $vhost %>!</h1>
+
+<p>This is a test of the Nginx and Puppet software packages!</p>
+
+</body>
+</html>
