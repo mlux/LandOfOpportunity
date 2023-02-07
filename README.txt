@@ -13,6 +13,9 @@ TROUBLESHOOTING NOTES:
   https://support.puppet.com/hc/en-us/articles/8423100014487-Fix-a-Could-not-run-The-certificate-error-message-on-an-agent-node-in-Puppet-Enterprise
   https://www.edureka.co/community/57169/puppet-getting-traceback-puppet-master-trying-certificates
 
+INSTALLING GIT:
+
+https://www.how2shout.com/linux/how-to-install-git-on-almalinux-or-rocky-linux-8/
 
 PUPPET RESOURCES:
 
@@ -47,7 +50,6 @@ SETUP ROOT PRIVILEDGES:
 
 https://www.cyberciti.biz/faq/linux-list-users-command/#:~:text=How%20do%20I%20list%20users,command%2Fegrep%20command%20and%20more.
 https://www.atlantic.net/vps-hosting/how-to-create-a-sudo-user-in-rocky-linux-8/
-
 
 
 
