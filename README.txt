@@ -42,3 +42,13 @@ https://linuxiac.com/nginx-virtual-host/
 DISABLE FIREWALL:
 
 https://www.server-world.info/en/note?os=Rocky_Linux_8&p=initial_conf&f=2
+
+SETUP ROOT PRIVILEDGES:
+
+https://www.cyberciti.biz/faq/linux-list-users-command/#:~:text=How%20do%20I%20list%20users,command%2Fegrep%20command%20and%20more.
+https://www.atlantic.net/vps-hosting/how-to-create-a-sudo-user-in-rocky-linux-8/
+
+
+
+
+
