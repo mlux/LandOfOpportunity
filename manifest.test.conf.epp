@@ -1,9 +1,0 @@
-server {
-	listen	80;
-	server_name	www.manifest.test.com manifest.test.com;
-
-	location / {
-		root /usr/share/nginx/manifest.test.com;
-		index	index.html;
-	}
-}

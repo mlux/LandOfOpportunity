@@ -1,0 +1,9 @@
+server {
+	listen	80;
+	server_name	www.<%= $vhost %> <%= $vhost %>;
+
+	location / {
+		root <%= $doc_root %>/<%= $vhost %>;
+		index	index.html;
+	}
+}
