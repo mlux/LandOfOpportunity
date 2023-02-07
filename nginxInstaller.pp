@@ -8,10 +8,10 @@ node puppet.target.com {
 		mode => '0644',
 	}
 
-#	service {"nginx":
-#		ensure => 'running',
-#		enable => true,
-#	}
+	service {"nginx":
+		ensure => 'running',
+		enable => true,
+	}
 
 	file {'/usr/share/nginx/actestsite.com':
 		ensure => "directory",
@@ -42,13 +42,6 @@ node puppet.target.com {
 
 	file {"/etc/nginx/nginx.conf":
 		content => epp("/etc/puppetlabs/code/environments/production/templates/nginx.conf.epp"),
+		notify =>Service["nginx"],
 	}
-
-	service { 'nginx':
-		restart => 'systemctl restart nginx',
-	}
-
 }
-
-
-
