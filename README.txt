@@ -54,6 +54,8 @@ https://www.atlantic.net/vps-hosting/how-to-create-a-sudo-user-in-rocky-linux-8/
 CONFIGURING ANSIBLE:
 
 https://www.youtube.com/watch?v=Q4KWe2gd0ZU
+https://www.redhat.com/en/blog/managing-ansible-configuration-files#:~:text=One%20use%20case%20where%20this,directory%20can%20facilitate%20this%20behavior.
+
 
 NFSD DOCUMENTATION:
 
