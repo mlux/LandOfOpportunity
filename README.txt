@@ -62,3 +62,4 @@ NFSD DOCUMENTATION:
 https://man7.org/linux/man-pages/man7/nfsd.7.html#:~:text=The%20nfsd%20filesystem%20is%20a,provide%20information%20about%20the%20server.
 https://www.dummies.com/article/technology/computers/operating-systems/linux/how-to-share-files-with-nfs-on-linux-systems-255851/
 https://docs.kernel.org/admin-guide/nfs/nfsd-admin-interfaces.html
+https://computingforgeeks.com/install-and-configure-nfs-server-on-rocky-linux/
