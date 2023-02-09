@@ -1,0 +1,86 @@
+- name: Install NFSD
+  hosts: all
+  become: true
+  vars:
+    source: "/var/nfs/share"
+    destination: "/mnt/share"
+    permission: '0777'
+    myopts: 'rw,sync,no_subtree_check'
+
+  tasks:
+    - name: Install nfs-utils
+      ansible.builtin.yum:
+        name:
+          - nfs-utils
+          - nfs4-acl-tools
+        state: present
+
+    - name: Enable NFS-Server
+      ansible.builtin.service:
+        name: nfs-server
+        enabled: yes
+
+    - name: Stop NFS-Server
+      ansible.builtin.service:
+        name: nfs-server
+        state: stopped
+
+    - name: Update Server idmapd.conf
+      ansible.builtin.lineinfile:
+        path: /etc/idmapd.conf
+        search_string: 'Domain ='
+        line: Domain = puppetmaster.deployer8.com
+        owner: root
+        group: root
+        mode: "{{ permission }}"
+      when: ansible_ssh_host == 'master'
+
+    - name: Update Client idmapd.conf
+      ansible.builtin.lineinfile:
+        path: /etc/idmapd.conf
+        search_string: 'Domain ='
+        line: Domain = puppet.target.com
+        owner: root
+        group: root
+        mode: '0644'
+      when: ansible_ssh_host == 'agent'
+
+    - name: Create Shared Server Directory
+      ansible.builtin.file:
+        path: "{{ source }}"
+        state: directory
+        owner: nobody
+        group: nobody
+        mode: "{{ permission }}"
+      when: ansible_ssh_host == 'master'
+
+    - name: Edit Export List
+      ansible.builtin.lineinfile:
+        path: /etc/exports
+        line: '{{ source }} 10.0.2.15({{ myopts }})'
+        create: yes
+      when: ansible_ssh_host == 'master'
+
+    - name: Create Client Destination Directory
+      ansible.builtin.file:
+        path: "{{ destination }}"
+        state: directory
+        owner: root
+        group: root
+        mode: "{{ permission }}"
+      when: ansible_ssh_host == 'agent'
+
+    - name: Restart NFS-Server
+      ansible.builtin.service:
+        name: nfs-server
+        state: restarted
+
+    - name: Verify NFS-Server Start
+      ansible.builtin.service:
+        name: nfs-server
+        state: started
+
+    - name: Execute Mount
+      ansible.builtin.command: "sudo mount -t nfs4 10.0.2.4:/{{ source }} {{ destination }}"
+      when: ansible_ssh_host == 'agent'
+      
