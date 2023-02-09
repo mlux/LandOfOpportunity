@@ -1,0 +1,48 @@
+- name: Create an export of /exportdir
+  hosts: all
+  become: true
+  vars:
+    source: "/exportdir"
+    destination: "/mnt2/share2"
+    permission: '0777'
+    myopts: 'rw,sync,no_subtree_check'
+
+  tasks:
+    - name: Create Shared Server Directory
+      ansible.builtin.file:
+        path: "{{ source }}"
+        state: directory
+        owner: nobody
+        group: nobody
+        mode: "{{ permission }}"
+      when: ansible_ssh_host == 'master'
+
+    - name: Edit Export List
+      ansible.builtin.lineinfile:
+        path: /etc/exports
+        line: '{{ source }} 10.0.2.15({{ myopts }})'
+        create: yes
+      when: ansible_ssh_host == 'master'
+
+    - name: Create Client Destination Directory
+      ansible.builtin.file:
+        path: "{{ destination }}"
+        state: directory
+        owner: root
+        group: root
+        mode: "{{ permission }}"
+      when: ansible_ssh_host == 'agent'
+
+    - name: Restart NFS-Server
+      ansible.builtin.service:
+        name: nfs-server
+        state: restarted
+
+    - name: Verify NFS-Server Start
+      ansible.builtin.service:
+        name: nfs-server
+        state: started
+
+    - name: Execute Mount
+      ansible.builtin.command: "sudo mount 10.0.2.4:/{{ source }} {{ destination }}"
+      when: ansible_ssh_host == 'agent'
